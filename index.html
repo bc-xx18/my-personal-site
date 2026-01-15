@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hwanany | 知行合一</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* 深墨色 */
+            --accent-color: #e67e22;  /* 琥珀色 */
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+        }
+
+        * { margin: 0; padding: 0; box-box: border-box; }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* 背景装饰：淡淡的水墨感 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 90% 10%, rgba(44, 62, 80, 0.03) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+        /* 头部设计 */
+        header { text-align: center; margin-bottom: 60px; }
+        .avatar {
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            padding: 5px; margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        .avatar:hover { transform: rotate(360deg); }
+        h1 { font-size: 2.5rem; letter-spacing: 5px; color: var(--primary-color); }
+        .motto { font-style: italic; color: var(--accent-color); margin-top: 10px; }
+
+        /* 板块通用样式 */
+        section { margin-bottom: 50px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 25px; font-size: 1.5rem; }
+
+        /* 技术标签 */
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag {
+            background: #eee; padding: 5px 15px; border-radius: 20px;
+            font-size: 0.9rem; color: var(--primary-color);
+        }
+
+        /* 项目卡片 */
+        .project-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #ddd; }
+        .project-item:last-child { border-bottom: none; }
+        .project-title { font-weight: bold; color: var(--primary-color); font-size: 1.1rem; }
+
+        /* 社交链接 */
+        .social-links { text-align: center; margin-top: 40px; }
+        .social-links a {
+            color: var(--primary-color); font-size: 1.5rem; margin: 0 15px;
+            text-decoration: none; transition: color 0.3s;
+        }
+        .social-links a:hover { color: var(--accent-color); }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="https://via.placeholder.com/120" alt="Avatar" class="avatar">
+        <h1>Hwanany</h1>
+        <p class="motto">“知行合一，格物致知”</p>
+    </header>
+
+    <section id="about">
+        <h2>👤 关于我 / Profile</h2>
+        <p>
+            我是 Hwanany，一名 INFJ 类型的开发者。我热衷于在代码的世界里寻找逻辑之美，同时也深爱着中国传统文化的哲学底蕴。
+            目前主要钻研 <strong>Python 自动化</strong> 与 <strong>Java Web 开发</strong>。
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>🛠️ 技能栈 / Skills</h2>
+        <div class="tags">
+            <span class="tag">Python (Web Scraping)</span>
+            <span class="tag">Java (JSP & Servlet)</span>
+            <span class="tag">SQL</span>
+            <span class="tag">阳明心学</span>
+            <span class="tag">奇门遁甲分析</span>
+            <span class="tag">战略思维</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>🚀 项目展示 / Projects</h2>
+        <div class="project-item">
+            <div class="project-title">Python 自动化数据爬取工具</div>
+            <p>基于 Selenium/Scrapy 实现的高效数据采集方案，解决动态加载难题。</p>
+        </div>
+        <div class="project-item">
+            <div class="project-title">玄学心理学 - 红书内容创作</div>
+            <p>探索传统易学与现代心理学的交叉点，打造自媒体品牌。</p>
+        </div>
+        <div class="project-item">
+            <div class="project-title">Java JSP 实验项目库</div>
+            <p>大学期间完成的一系列基于 JSP 常用内置对象的 Web 应用练习。</p>
+        </div>
+    </section>
+
+    <section id="philosophy">
+        <h2>📖 随笔与思考 / Philosophy</h2>
+        <blockquote>
+            “人须在事上磨，方立得住，方能‘静亦定，动亦定’。”
+        </blockquote>
+        <p style="margin-top:15px; font-size: 0.9rem; color: #777;">
+            我致力于将战略思维融入代码架构，用“主观能动性”去处理每一个复杂的 Bug。
+        </p>
+    </section>
+
+    <div class="social-links">
+        <a href="https://github.com/你的账号" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://space.bilibili.com/你的ID" target="_blank" title="Bilibili"><i class="fas fa-play-circle"></i></a>
+        <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #bbb;">© 2026 Hwanany. Built with Vercel & Cloudflare.</p>
+    </div>
+</div>
+
+</body>
+</html>
